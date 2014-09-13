@@ -5,7 +5,7 @@ Description: The Neo4j database community edition cartridge (http://www.neo4j.or
 Version: "2.1.4"
 Website: cartridge provided by bharat.kishnani@gmail.com
 Cartridge-Version: 0.1.0
-Cartridge-Vendor: bharatkishnani
+Cartridge-Vendor: bharat-kishnani
 Categories:
   - service
   - database
@@ -22,4 +22,4 @@ Endpoints:
     Private-Port-Name: PORT
     Private-Port:      7474
 
-Source-Url: https://github.com/bharatkishnani/openshift-cartridge-neo4j.git
+Source-Url: https://github.com/bharat-kishnani/openshift-cartridge-neo4j.git
