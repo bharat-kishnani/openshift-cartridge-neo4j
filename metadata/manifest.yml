@@ -5,7 +5,7 @@ Description: The Neo4j database community edition cartridge (http://www.neo4j.or
 Version: "2.1.4"
 Website: cartridge provided by bharat.kishnani@gmail.com
 Cartridge-Version: 0.1.0
-Cartridge-Vendor: bharat-kishnani
+Cartridge-Vendor: bharatkishnani
 Categories:
   - service
   - database
