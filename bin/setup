@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+set -u
+
+for dir in logs tmp pid cache dbs env; do
+	mkdir -p $dir
+done
+
+echo $(pwd)/versions/2.1.4/neo4j-community-2.1.4/bin > env/OPENSHIFT_NEO4J_PATH_ELEMENT
+
+client_result "Neo4j is now configured"

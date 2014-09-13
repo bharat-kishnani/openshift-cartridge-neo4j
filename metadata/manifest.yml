@@ -1,0 +1,25 @@
+Name: neo4j
+Cartridge-Short-Name: NEO4J
+Display-Name: neo4j-2.1.4
+Description: The Neo4j database community edition cartridge (http://www.neo4j.org).
+Version: "2.1.4"
+Website: cartridge provided by bharat.kishnani@gmail.com
+Cartridge-Version: 0.1.0
+Cartridge-Vendor: bharatkishnani
+Categories:
+  - service
+  - database
+  - standalone
+  - neo4j
+Provides:
+  - neo4j-2.1.4
+  - neo4j
+Scaling:
+  Min: 1
+  Max: -1
+Endpoints:
+  - Private-IP-Name:   HOST
+    Private-Port-Name: PORT
+    Private-Port:      7474
+
+Source-Url: https://github.com/bharatkishnani/openshift-cartridge-neo4j.git
