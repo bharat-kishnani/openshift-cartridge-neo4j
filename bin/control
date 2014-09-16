@@ -1,11 +1,11 @@
 #!/bin/bash
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
-NEO4J_BIN_DIR=${OPENSHIFT_NEO4J_DIR}/bin
+NEO4J_BIN_DIR=${OPENSHIFT_NEO4J_DIR}/versions/2.1.4/neo4j-community-2.1.4/bin
 
 STOPTIMEOUT=10
 FMT="%a %b %d %Y %H:%M:%S GMT%z (%Z)"
-PID=pid/neo4j.pid
+PID=${OPENSHIFT_NEO4J_DIR}/versions/2.1.4/neo4j-community-2.1.4/data/neo4j-service.pid
 
 NEO4J_CLI="-host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT"
 
@@ -32,7 +32,7 @@ function start() {
 
     client_result "neo4j is not running...starting it now"
 
-    bin/neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
+    ${NEO4J_BIN_DIR}/neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
 
     ret=$?
     if [ $ret -ne 0 ]; then
@@ -44,7 +44,7 @@ function start() {
 function stop() {
     if (is_running); then
         client_result "neo4j is running ...issuing stop ";
-        neo4j-cli $NEO4J_CLI SHUTDOWN
+        ${NEO4J_BIN_DIR}/neo4j stop
         if [ $? -eq 0 ]; then
             exit 0
         fi
