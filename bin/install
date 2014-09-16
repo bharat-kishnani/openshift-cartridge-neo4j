@@ -7,10 +7,5 @@ source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 client_result "installing neo4j....`date`"
 
-tar xvzf $OPENSHIFT_NEO4J_DIR/versions/jre*.tar.gz --directory=$OPENSHIFT_NEO4J_DIR
-mv $OPENSHIFT_NEO4J_DIR/jre* $OPENSHIFT_NEO4J_DIR/jre-install
-
-tar xvzf $OPENSHIFT_NEO4J_DIR/versions/neo4j-*/LINUX* --directory=$OPENSHIFT_NEO4J_DIR
-mv $OPENSHIFT_NEO4J_DIR/neo4j-* $OPENSHIFT_NEO4J_DIR/neo4j-install
 
 client_result "install complete....`date`"
