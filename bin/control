@@ -1,11 +1,11 @@
 #!/bin/bash
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
-NEO4J_BIN_DIR=${OPENSHIFT_NEO4J_DIR}/versions/2.1.4/neo4j-community-2.1.4/bin
+NEO4J_BIN_DIR=${OPENSHIFT_NEO4J_DIR}versions/2.1.4/neo4j-community-2.1.4/bin
 
 STOPTIMEOUT=10
 FMT="%a %b %d %Y %H:%M:%S GMT%z (%Z)"
-PID=${OPENSHIFT_NEO4J_DIR}/versions/2.1.4/neo4j-community-2.1.4/data/neo4j-service.pid
+PID=${OPENSHIFT_NEO4J_DIR}versions/2.1.4/neo4j-community-2.1.4/data/neo4j-service.pid
 
 NEO4J_CLI="-host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT"
 
@@ -37,7 +37,7 @@ function start() {
     ret=$?
     if [ $ret -ne 0 ]; then
         echo "Neo4j failed to start - $ret" 1>&2
-        exit $ret
+#        exit $ret
     fi
 }
 
