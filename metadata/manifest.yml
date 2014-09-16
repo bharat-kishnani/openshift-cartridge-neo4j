@@ -9,8 +9,7 @@ Cartridge-Vendor: bharatkishnani
 Categories:
   - service
   - database
-  - standalone
-  - neo4j
+  - embedded
 Provides:
   - neo4j-2.1.4
   - neo4j
